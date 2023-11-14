@@ -1,8 +1,18 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-color: #f7f7f770;
+
+}
+
+section {
+    padding: 2rem 0;
+}
+
 
 .card{
     display: flex;
@@ -19,14 +29,14 @@
     border: 2px solid #eee;
     transition: transform 0.3s ease-in-out; 
 }
-
-
-  .card:hover {
-    transform: scale(1.1); /* Scale the card on hover */
+h3{
+    font-size: 1.5rem;
 }
 
- 
-
+h4 {
+    color: #7BA801;
+    font-size: 20px;
+}
 
 .card-image-container{
     width: 90%;
@@ -55,4 +65,76 @@
 }
 .card button:hover{
     background-color: #B18D02;
+}
+
+.card:hover {
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    -webkit-transform: scale(1.1);
+}
+
+@media (max-width: 890px) {
+    .card img {
+        width: 100%;
+        border-radius: 35% 2%;
+        -webkit-border-radius: 35% 2%;
+        -moz-border-radius: 35% 2%;
+        -ms-border-radius: 35% 2%;
+        -o-border-radius: 35% 2%;
+    }
+}
+
+.card button {
+    background-color: #fff;
+    color: #E47600;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #3d3d3d;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.card button:hover {
+    background-color: #B18D02;
+}
+
+.b-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 0 15px;
+}
+
+@media (min-width:900px) {
+    section {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+
+    }
+
+    .card {
+        flex: 0 0 calc(33.33% - 30px);
+        height: fit-content;
+        min-height: 200px;
+        padding: 15px;
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    .b-flex {
+        padding: 0;
+    }
+
 }
